@@ -1,10 +1,12 @@
 *{
     margin: 0px;
     padding: 0px;
-    background-color: #f7f7f7;
+    
     font-family: Lato;
     box-sizing: border-box;
-    
+}
+body{
+    background-color: #f7f7f7;
 }
 nav {
     height: 70px;
@@ -66,6 +68,7 @@ section{
     font-weight: bold;
     text-align: left;
     color: #000000;
+    margin-left: 15px; 
 }
 div > section {
     padding: 30px 15px;
@@ -312,6 +315,11 @@ div > section {
 .item{
     flex: 1;
     padding: 0 15px;
+    background-size: cover;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .item1{
     flex: 1;
@@ -321,6 +329,7 @@ div > section {
     flex-direction: column;
     justify-content: space-between;
 }
+
 .below-description{
     font-family: Lora;
     font-size: 12px;
@@ -332,6 +341,32 @@ div > section {
 }
 .show{
     display: none;
+}
+.show2{
+    display: none;
+}
+.carousel-indicators{
+    display: none;
+}
+.caro-img{
+    height: 380px;
+    background-size: cover;
+
+}
+.carousel-cap{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 380px;
+    position: absolute;
+    z-index: 111;
+}
+@media only screen and (max-width: 549px){
+    .item3{
+        padding: 0 30px;
+    }
 }
 @media only screen and (min-width: 768px){
     .con{
@@ -370,4 +405,40 @@ div > section {
 }
 .marg{
     margin: 15px 0;
+}
+@media only screen and (min-width: 1024px){
+    .show1{
+        display: block;
+    }
+    .con-lg{
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .item-lg{
+        flex: 1;  
+        width: 40%;      
+    }
+    .item{
+        width: 100%
+    }
+    .half{
+        width: 50%;
+    }
+    .lg{
+        font-size: 30px;
+    }
+    .lg-d{
+        font-size: 18px;
+    }
+    .fd{
+        font-size: 22px;
+    }
+    .fd-a{
+        font-size: 16px;
+    }
+    .headed{
+        margin: 30px 15px 15px 15px;
+    }
 }

@@ -1,9 +1,10 @@
 (function(){
 'use strict';
 
-angular.module('myApp', [])
+angular.module('myApp', ['ui.bootstrap'])
 .controller('newCon', function(Service) {
     var vm = this;
+    vm.myInterval = 3000;
     vm.ofset = 0;
     vm.submit = function(){
         var promise = Service.stories();
