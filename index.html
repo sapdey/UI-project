@@ -95,15 +95,16 @@
                 </article>
             </div>
         </article>
-        <div>
-            <uib-carousel interval="vm.myInterval" active="vm.activeSlide">
-                        <uib-slide ng-repeat="(key, value) in vm.story | limitTo: 3" index="$index" class="caro-img">
-                            <img  class="image" ng-src="http://quintype-01.imgix.net/{{value['hero-image-s3-key']}}" alt="image" style="margin:auto; position: relative ">
+        <div style="height:380px" >
+            <uib-carousel interval="vm.myInterval" active="vm.activeSlide" style="height:380px" class="">
+                        <uib-slide ng-repeat="(key, value) in vm.story | limitTo: 3" index="$index" style="height:380px" class="">
+                            <img class="image" ng-src="http://quintype-01.imgix.net/{{value['hero-image-s3-key']}}" alt="image" style="margin:auto;">
                             <div class="carousel-cap">
                                 <div>Must Reads</div>
                                 <div>{{value['headline']}}</div>
                                 <button class="btn">READ STORY</button>
                             </div>
+                            
                         </uib-slide>
                 </uib-carousel>
             </div>
@@ -111,39 +112,39 @@
             <div class="drblue-line" style="margin-left:15px"></div>
             <div class="con-lg">
                 <!-- <article class="con"> -->
-                    <div class="below item item-lg" style="margin: 15px 0 15px">                    
+                    <article class="below item item-lg" style="margin: 15px 0 15px">                    
                             <img class="image item1" src="images/long-trump.jpg" alt="">                    
                                     <div class="above1" style="background-color: transparent;">Lin-Manuel Miranda says Donald Trump is spreading ‘a virulent strain of a virus’</div>
                                     <div class="above2" style="background-color: transparent;">Jonnathan Doe</div>
-                    </div>
+                    </article>
                     <article class="item item-lg">
-                    <section style="margin: 15px 0 15px">
-                            <img class="image" src="images/trump.jpg" alt="">
-                            <div class="story more-padded background">
-                                    <div class="description large-description background">Jenny Lawson Is Publishing a New Book and It’s Sort of a Coloring Book</div>
-                                    <div class="author large-author background">Jonnathan Doe</div>
-                            </div>
-                    </section>
-                    <section style="margin: 15px 0 15px">
-                            <div class="story more-padded background">
-                                    <div class="description large-description background">Airtel Offers 3 GB Free Data A Month To Customers Who Switch To Its 4G Service</div>
-                                    <div class="author large-author background">Alice Doe</div>
-                            </div>
-                    </section>
-                </article>
+                        <section style="margin: 15px 0 15px">
+                                <img class="image" src="images/trump.jpg" alt="">
+                                <div class="story more-padded background">
+                                        <div class="description large-description background">Jenny Lawson Is Publishing a New Book and It’s Sort of a Coloring Book</div>
+                                        <div class="author large-author background">Jonnathan Doe</div>
+                                </div>
+                        </section>
+                        <section style="margin: 15px 0 15px">
+                                <div class="story more-padded background">
+                                        <div class="description large-description background">Airtel Offers 3 GB Free Data A Month To Customers Who Switch To Its 4G Service</div>
+                                        <div class="author large-author background">Alice Doe</div>
+                                </div>
+                        </section>
+                    </article>
                 <!-- </article> -->
-                <article class=" item-lg">
+                <article class="con2 item-lg">
                     <article class="item item3">
                         <section class="nobackground">
                                 <div class="story less-padded">
-                                        <div class="description card-description">Airtel Offers 3 GB Free Data A Month To Customers Who Switch To Its 4G Service</div>
+                                        <div class="description card-description overflw">Airtel Offers 3 GB Free Data A Month To Customers Who Switch To Its 4G Service</div>
                                         <div class="author large-author">Jonnathan Doe</div>
                                         <div class="line"></div>
                                 </div> 
                         </section>
                         <section class="nobackground">
                                 <div class="story less-padded">
-                                        <div class="description card-description">Warning Letter For Ankleshwar Plant Sends Wockhardt Shares To Near 2.5-Year Low</div>
+                                        <div class="description card-description overflw">Warning Letter For Ankleshwar Plant Sends Wockhardt Shares To Near 2.5-Year Low</div>
                                         <div class="author large-author">Alice Doe</div>
                                         <div class="line vanish show1"></div>
                                 </div>
@@ -152,14 +153,14 @@
                     <article class="item item3">
                         <section class="nobackground">
                                 <div class="story less-padded">
-                                        <div class="description card-description">Sundar Pichai Launches ‘Digital Unlocked’ Programme</div>
+                                        <div class="description card-description overflw">Sundar Pichai Launches ‘Digital Unlocked’ Programme</div>
                                         <div class="author large-author">Jonnathan Doe</div>
                                         <div class="line"></div>
                                 </div>
                         </section>
                         <section class="nobackground">
                                 <div class="story less-padded">
-                                        <div class="description card-description">Warning Letter For Ankleshwar Plant Sends Wockhardt Shares To Near 2.5-Year Low</div>
+                                        <div class="description card-description overflw">Warning Letter For Ankleshwar Plant Sends Wockhardt Shares To Near 2.5-Year Low</div>
                                         <div class="author large-author">Alice Doe</div>
                                 </div>
                         </section>
@@ -230,7 +231,7 @@
                         </div>
                         <div class="story story-right story-right-tab background">
                             <div class="template template-tab background">{{value['sections'][0].name}}</div>
-                            <div class="description description-tab background">{{value['headline']}}</div>
+                            <div class="description description-tab large background">{{value['headline']}}</div>
                             <div class="author author-tab background">{{value['author-name']}}</div>
                             <div class="publish publish-tab background">Posted {{value['published-at'] | date : "mm"}} min ago</div>
                         </div>

@@ -19,7 +19,6 @@ nav {
 nav p {
     padding: 0px;
     background-color: #ffffff;
-    margin: 0px;
     font-weight: bold;
     text-align: left;
     color: #000000;
@@ -348,10 +347,13 @@ div > section {
 .carousel-indicators{
     display: none;
 }
+.carousel{
+    position: relative;
+}
 .caro-img{
     height: 380px;
     background-size: cover;
-
+    
 }
 .carousel-cap{
     display: flex;
@@ -362,6 +364,19 @@ div > section {
     height: 380px;
     position: absolute;
     z-index: 111;
+    top:150px;
+}
+.con-lg{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.item-lg{
+    flex: 1;
+    min-width: 325px;
+}
+a.right.carousel-control, a.left.carousel-control {
+    background-image: none;
 }
 @media only screen and (max-width: 549px){
     .item3{
@@ -377,10 +392,6 @@ div > section {
     }
     .vanish{
         display: none;
-    }
-    
-    .item{
-        width: 50%
     }
     .template-tab{
         font-size: 12px;
@@ -402,29 +413,37 @@ div > section {
     .show{
         display: block;
     }
+    nav p {
+        font-size: 22px;
+    }
 }
 .marg{
     margin: 15px 0;
 }
-@media only screen and (min-width: 1024px){
-    .show1{
-        display: block;
-    }
-    .con-lg{
+@media only screen and (min-width: 668px) and (max-width: 991px){
+    .con2{
         display: flex;
         flex-wrap: nowrap;
         flex-direction: row;
         justify-content: space-between;
     }
-    .item-lg{
-        flex: 1;  
-        width: 40%;      
+    .overflw{
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+    }
+}
+@media only screen and (min-width: 1024px){
+    .show1{
+        display: block;
     }
     .item{
         width: 100%
     }
     .half{
-        width: 50%;
+        min-width: 325px;
     }
     .lg{
         font-size: 30px;
@@ -443,5 +462,14 @@ div > section {
     }
     header{
         margin-bottom: 15px;
+    }
+    nav{
+        height: 89px;
+    }
+    nav p{
+        font-size: 36px;
+    }
+    .large{
+        width: 425px;
     }
 }
