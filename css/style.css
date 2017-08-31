@@ -14,15 +14,35 @@ nav {
     background-color: #ffffff;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.ham{
+    flex: 1;
+    max-width: 30px;
+    min-height: 25px;
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    margin-left: 3%;
+}
+.line-hm{
+    width: 30px;
+    height: 1px;
+    border: solid 1.5px #000000;
+}
+p {
+    margin: 0px;
 }
 nav p {
-    padding: 0px;
+    flex: 1;
+    /* padding: 0px; */
     background-color: #ffffff;
     font-weight: bold;
     text-align: left;
     color: #000000;
-    margin-left: 5%;
+    margin-left: 2%;
+    font-size: 22px;
 }
 nav img {
     width: 30px; 
@@ -356,6 +376,10 @@ a.right.carousel-control, a.left.carousel-control {
     background-image: none;
 }
 @media only screen and (max-width: 549px){
+    .ham{
+        min-width: 10px;
+        min-height: 20px;
+    }
     .item3{
         padding: 0 30px;
     }
@@ -367,7 +391,7 @@ a.right.carousel-control, a.left.carousel-control {
         justify-content: space-between;
         align-items: stretch;
     }
-    .vanish{
+    .vanish, .vanish1{
         display: none;
     }
     .template-tab{
@@ -398,6 +422,10 @@ a.right.carousel-control, a.left.carousel-control {
     margin: 15px 0;
 }
 @media only screen and (min-width: 668px) and (max-width: 991px){
+    .ham{
+        min-width: 15px;
+        min-height: 20px;
+    }
     .con2{
         display: flex;
         flex-wrap: nowrap;
@@ -416,9 +444,9 @@ a.right.carousel-control, a.left.carousel-control {
     .show1, .vanish, .show2{
         display: block;
     }
-    /* .show2{
-        display: block;
-    } */
+    .vanish1{
+        display: none;
+    }
     .item{
         width: 100%
     }
@@ -447,7 +475,7 @@ a.right.carousel-control, a.left.carousel-control {
         height: 89px;
     }
     nav p{
-        font-size: 36px;
+        font-size: 32px;
     }
     .large{
         width: 425px;
