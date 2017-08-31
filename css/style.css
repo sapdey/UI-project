@@ -37,7 +37,6 @@ section{
 .contain {
     max-width: 1172px;
     background-color: #f7f7f7;
- /* padding: 0 10px; */
     margin: auto;
     box-shadow: none;
 }
@@ -77,16 +76,11 @@ div > section {
     justify-content: space-between;
     margin-bottom: 30px;
 }
-/* .stories > div {
-    display: flex;
-    margin-bottom: 10px;
-} */
 .story-image{
     max-width: 370px;
     max-height: 279px;
     flex: 1;
-    background-size: cover;
-    /* margin-right: 10px; */
+    background-size: contain;
 }
 .image {
     width: 100%;
@@ -98,8 +92,6 @@ div > section {
 }
 .above1{
     position: absolute;
-    /* width: 361px;
-    height: 114px; */
     font-family: Lato;
     font-size: 28px;
     font-weight: bold;
@@ -111,8 +103,6 @@ div > section {
 }
 .above2{
     position: absolute;
-    /* width: 107px;
-    height: 19px; */
     font-family: Lato;
     font-size: 16px;
     text-align: left;
@@ -121,12 +111,10 @@ div > section {
     margin-left: 22px;
 }
 .story {
-    /* background-color: #ffffff; */
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-around;
-    /* margin: 0 10px; */
 }
 .story1{
     display: flex;
@@ -140,9 +128,6 @@ div > section {
     padding: 0 10px 0 10px;
 }
 .template{
-    /* width: 115px;
-    height: 13px; */
-    /* background-color: #ffffff; */
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -155,9 +140,6 @@ div > section {
     margin-bottom: 2px;
 }
 .description{
-    /* width: 187px;
-    height: 63px; */
-    /* background-color: #ffffff; */
     font-size: 14px;
     line-height: 1.5;
     text-align: left;
@@ -170,9 +152,6 @@ div > section {
     margin-bottom: 7px;
 }
 .author{
-    /* width: 81px;
-    height: 15px; */
-    /* background-color: #ffffff; */
     font-size: 12px;
     text-align: left;
     color: #818181;
@@ -181,8 +160,6 @@ div > section {
     font-size:  16px;
 }
 .publish{
-    /* width: 81px;
-    height: 12px; */
     background-color: #ffffff;
     font-size: 10px;
     font-weight: 300;
@@ -436,9 +413,12 @@ a.right.carousel-control, a.left.carousel-control {
     }
 }
 @media only screen and (min-width: 1024px){
-    .show1{
+    .show1, .vanish, .show2{
         display: block;
     }
+    /* .show2{
+        display: block;
+    } */
     .item{
         width: 100%
     }

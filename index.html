@@ -81,11 +81,11 @@
                         </div>
                 </section>
             </article>
-            <div class="item show2 vanish show1">
-                <article class="con">
+            <div class="item vanish">
+                <article class="con show2 show1">
                     <img src="images/group-2.svg" alt="">
                 </article>
-                <article class="vanish con show1">
+                <article class="con show1">
                     <div class="subscribe">
                         <img src="images/message-copy.svg" alt="" style="background-color: #2f73e4;">
                         <p class="sub">Subscribe to Newsletter</p>
@@ -227,7 +227,7 @@
                     <div class="darkblue-line"></div>
                     <div ng-repeat="(key, value) in vm.story" class="stories">
                         <div class="story-image background">
-                            <img class="image" ng-src="http://quintype-01.imgix.net/{{value['hero-image-s3-key']}}" alt="image">
+                            <img class="image" ng-src="http://quintype-01.imgix.net/{{value['hero-image-s3-key']}}" alt="image" style="max-height: 279px">
                         </div>
                         <div class="story story-right story-right-tab background">
                             <div class="template template-tab background">{{value['sections'][0].name}}</div>
