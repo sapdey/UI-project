@@ -10,7 +10,6 @@ angular.module('myApp', ['ui.bootstrap'])
         var promise = Service.stories();
 
             promise.then(function(response){
-                console.log(response.data);
                 vm.story = response.data.stories;
                 vm.mostRecent = response.data.stories;
             })
@@ -24,7 +23,6 @@ angular.module('myApp', ['ui.bootstrap'])
         var promise = Service.history(vm.ofset);
 
             promise.then(function(response){
-                console.log(response.data);
                 vm.newstory = response.data.stories;
                 vm.story.push.apply(vm.story,vm.newstory);
             }).catch(function(error){
@@ -61,7 +59,6 @@ angular.module('myApp', ['ui.bootstrap'])
             var clientHeight = window.innerHeight;
             //document or element
             $document.bind("scroll", function () {
-                // console.log(doc.scrollTop, clientHeight, doc.scrollHeight)
                 if (doc.scrollTop + clientHeight >= doc.scrollHeight - 5) {
                     scope.$apply(attrs.onScrollToBottom);
                 }
