@@ -346,22 +346,63 @@ div > section {
 }
 .carousel{
     position: relative;
+    overflow: hidden;
 }
 .caro-img{
-    height: 380px;
+    margin:auto;
     background-size: cover;
-    
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.caro-img::after{
+    content: '';
+    opacity: 0.35;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; 
+}
+.image1 {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    max-height: -webkit-fill-available;
+    opacity: 0.45;
 }
 .carousel-cap{
+    width: 100%;
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     height: 380px;
     position: absolute;
     z-index: 111;
-    top:150px;
+    top: 0px;
+}
+.car-must{
+    font-size: 34px;
+    font-weight: bold;
+    letter-spacing: -0.3px;
+    text-align: center;
+    color: #ffffff;
+}
+.car-des{
+    max-width: 871px;
+    font-size: 38px;
+    line-height: 1.32;
+    text-align: center;
+    color: #ffffff;
+}
+.car-btn{
+    width: 192.2px;
+    height: 51px;
+    background-color: transparent;
+    border: solid 2.4px #ffffff;
 }
 .con-lg{
     display: flex;
@@ -383,6 +424,31 @@ a.right.carousel-control, a.left.carousel-control {
     .item3{
         padding: 0 30px;
     }
+    .car-must{
+        width: 144px;
+        font-size: 28px;
+    }
+    .car-des{
+        max-width: 281px;
+        font-size: 22px;
+        line-height: 1.36;
+    }
+    .car-btn{
+        width: 173.3px;
+        height: 40px;
+        border-radius: 90px;
+        border: solid 2.2px #ffffff;
+    }
+    .caro-img1{
+        margin:auto;
+        background-size: contain;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+    
 }
 @media only screen and (min-width: 768px){
     .con{
@@ -439,6 +505,27 @@ a.right.carousel-control, a.left.carousel-control {
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
     }
+    .car-must{
+        width: 113px;
+        font-size: 22px;
+    }
+    .car-des{
+        width: 571px;
+        font-size: 24px;
+        line-height: 1.37;
+    }
+    .car-btn{
+        width: 125px;
+        height: 35px;
+        background-color: transparent;
+        border: solid 1.6px #ffffff;
+    }
+    .caro-img{
+        align-items: flex-start;
+    }
+    .image1{
+        max-height: none;
+    }
 }
 @media only screen and (min-width: 1024px){
     .show1, .vanish, .show2{
@@ -479,5 +566,11 @@ a.right.carousel-control, a.left.carousel-control {
     }
     .large{
         width: 425px;
+    }
+    .caro-img{
+        align-items: flex-start;
+    }
+    .image1{
+        max-height: none;
     }
 }

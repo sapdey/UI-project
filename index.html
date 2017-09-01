@@ -101,14 +101,14 @@
                 </article>
             </div>
         </article>
-        <div style="height:380px" >
-            <uib-carousel interval="vm.myInterval" active="vm.activeSlide" style="height:380px" class="">
-                        <uib-slide ng-repeat="(key, value) in vm.story | limitTo: 3" index="$index" style="height:380px" class="">
-                            <img class="image" ng-src="http://quintype-01.imgix.net/{{value['hero-image-s3-key']}}" alt="image" style="margin:auto;">
+        <div>
+            <uib-carousel interval="vm.myInterval" active="vm.activeSlide">
+                        <uib-slide ng-repeat="(key, value) in vm.story | limitTo: 3" index="$index" style="height:380px" class="carousel">
+                            <div class="caro-img"><img class="image1" ng-src="http://quintype-01.imgix.net/{{value['hero-image-s3-key']}}" alt="image"></div>
                             <div class="carousel-cap">
-                                <div>Must Reads</div>
-                                <div>{{value['headline']}}</div>
-                                <button class="btn">READ STORY</button>
+                                <div class="car-must">Must Reads</div>
+                                <div class="car-des">{{value['headline']}}</div>
+                                <button class="btn car-btn">READ STORY</button>
                             </div>
                             
                         </uib-slide>
@@ -117,7 +117,6 @@
             <h2 class="heading">Politics</h2>
             <div class="drblue-line" style="margin-left:15px"></div>
             <div class="con-lg">
-                <!-- <article class="con"> -->
                     <article class="below item item-lg" style="margin: 15px 0 15px">                    
                             <img class="image item1" src="images/long-trump.jpg" alt="">                    
                                     <div class="above1" style="background-color: transparent;">Lin-Manuel Miranda says Donald Trump is spreading ‘a virulent strain of a virus’</div>
@@ -138,7 +137,6 @@
                                 </div>
                         </section>
                     </article>
-                <!-- </article> -->
                 <article class="con2 item-lg">
                     <article class="item item3">
                         <section class="nobackground">
