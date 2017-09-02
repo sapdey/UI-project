@@ -284,7 +284,6 @@ div > section {
     line-height: 1.38;
     text-align: center;
     color: #ffffff;
-    /* margin: auto; */
 }
 .in{
     width: 100%;
@@ -292,7 +291,6 @@ div > section {
     border-radius: 4.3px;
     background-color: #ffffff;
     padding: 10px 16px;
-    /* margin: auto; */
 }
 .btn {
     width: 134.1px;
@@ -350,27 +348,28 @@ div > section {
 }
 .caro-img{
     margin:auto;
+    width: 100%;
     background-size: cover;
     display: flex;
-    position: relative;
-    overflow: hidden;
-}
-.caro-img::after{
-    content: '';
-    opacity: 0.35;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
     position: absolute;
-    z-index: -1; 
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: -1;
 }
 .image1 {
     width: 100%;
     max-width: 100%;
     height: auto;
     max-height: -webkit-fill-available;
-    opacity: 0.45;
+}
+.color{
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    opacity: 0.35;
 }
 .carousel-cap{
     width: 100%;
